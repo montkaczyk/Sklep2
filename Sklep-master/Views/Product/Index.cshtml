@@ -1,0 +1,26 @@
+﻿@model sklep.Models.ProductViewModel
+
+<form asp-action="Index" asp-controller="Product">
+    <h4>Add Product</h4>
+    <hr />
+
+    <input asp-for="Id" type="hidden" />  
+
+    <label asp-for="Name"></label>
+    <input asp-for="Name" class="form-control" />
+    <br />
+
+    <label asp-for="CategoryId"></label>
+    <input asp-for="CategoryId" class="form-control" />
+    <br />
+
+    <label asp-for="Price"></label>
+    <input asp-for="Price" class="form-control" type="number" step="0.01" />
+    <br />
+
+    <label asp-for="StockQuantity"></label>
+    <input asp-for="StockQuantity" class="form-control" type="number" />
+    <br />
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

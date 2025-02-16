@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Shop Homepage";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to our Shop!</h1>
+    <h2>Category: @ViewData["Category"]</h2>
+</div>
+
+<h3>Select a category:</h3>
+<ul>
+    <li>@Html.ActionLink("Electronics", "Index", "Home", new { Category = "Electronics" })</li>
+    <li>@Html.ActionLink("Clothing", "Index", "Home", new { Category = "Clothing" })</li>
+    <li>@Html.ActionLink("Books", "Index", "Home", new { Category = "Books" })</li>
+    <li>@Html.ActionLink("Home Appliances", "Index", "Home", new { Category = "Home Appliances" })</li>
+</ul>
+
+<h3>Test age-based views:</h3>
+<ul>
+    <li>@Html.ActionLink("User under 18", "Index", "Home", new { Age = 16 })</li>
+    <li>@Html.ActionLink("User 18 or older", "Index", "Home", new { Age = 20 })</li>
+</ul>
+
